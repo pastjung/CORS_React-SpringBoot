@@ -12,6 +12,7 @@
 # 1. 프로그램 (프로젝트) 설명
 - 본 프로젝트의 운영체제는 Linux OS를 기반으로 작성되었습니다.
 - 본 프로젝트는 Spring Security와 JWT를 고려하지 않은 프로젝트 입니다. ( 추후에 Spring Security를 도입할 경우 Filter와 연결해서 고려할 예정입니다. )
+- 본 프로젝트는 CORS 설정의 경우 Backend에서 설정하는 것이 바람직하다고 생각하여 Spring Boot 프로젝트에서 설정을 했습니다.
 
 # 2. Prerequisite
 
