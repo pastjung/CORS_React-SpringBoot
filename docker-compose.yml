@@ -10,10 +10,13 @@ services:
     tty: true
     volumes:
       - ./react-app:/react-app
+      - .env:/.env
     depends_on:
       - springboot-app
     ports:
       - ${REACT_HOST_PORT}:${REACT_SERVER_PORT}
+    env_file:
+      - .env
     networks:
       - inha
       
@@ -28,8 +31,11 @@ services:
     tty: true
     volumes:
       - ./springboot-app:/springboot-app
+      - .env:/.env
     ports:
       - ${SPRINGBOOT_HOST_PORT}:${SPRINGBOOT_SERVER_PORT}
+    env_file:
+      - .env
     networks:
       - inha
 
