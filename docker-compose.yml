@@ -13,7 +13,7 @@ services:
     depends_on:
       - springboot-app
     ports:
-      - "3000:3000"
+      - ${REACT_HOST_PORT}:${REACT_SERVER_PORT}
     networks:
       - inha
       
@@ -29,7 +29,7 @@ services:
     volumes:
       - ./springboot-app:/springboot-app
     ports:
-      - "8080:8080"
+      - ${SPRINGBOOT_HOST_PORT}:${SPRINGBOOT_SERVER_PORT}
     networks:
       - inha
 
