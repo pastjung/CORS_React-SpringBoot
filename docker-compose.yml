@@ -1,0 +1,20 @@
+services:
+  springboot-app:
+    build:
+      context: ./springboot-app
+      dockerfile : Dockerfile
+    image: 'springboot-image:latest'
+    container_name: 'springboot-container'
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./springboot-app:/springboot-app
+    ports:
+      - "8080:8080"
+    networks:
+      - inha
+
+networks:
+  inha:
+    name: inha
